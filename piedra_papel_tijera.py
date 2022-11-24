@@ -3,7 +3,8 @@
 import random 
 
 
-
+jugador=0
+local=0
 
 
 pruebas=int(input('Ingrese la cantidad de veces que desee jugar: '))
@@ -35,10 +36,20 @@ while pruebas!=0:
         print('')
         print(f'1 punto para tí, la maquina sacó {eleccion}')
         pruebas-=1
+        jugador+=1
 
     else:
         print('')
         print(f'Punto para la maquina, la maquina sacó {eleccion}')
         pruebas-=1
+        local+=1
 
+print(f'''
+--------------------------
+PUNTAJE FINAL
 
+Maquina: {local} Puntos
+
+Jugador: {jugador} Puntos
+---------------------------
+''')
